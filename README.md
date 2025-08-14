@@ -1,5 +1,28 @@
 # Courses  API para gerenciamento de cursos utilizando Fastify, Drizzle ORM e PostgreSQL.  
 
+## Diagrama de Fluxo Principal
+
+O diagrama abaixo ilustra o fluxo mais importante da aplicação: criação, listagem e consulta de cursos.
+
+```mermaid
+sequenceDiagram
+    participant Cliente
+    participant API
+    participant Banco
+    Cliente->>API: POST /courses (criar curso)
+    API->>Banco: Insere curso
+    Banco-->>API: Retorna ID do curso
+    API-->>Cliente: 201 Created + courseId
+    Cliente->>API: GET /courses (listar cursos)
+    API->>Banco: Consulta todos os cursos
+    Banco-->>API: Lista de cursos
+    API-->>Cliente: 200 OK + cursos
+    Cliente->>API: GET /courses/:courseId (detalhe)
+    API->>Banco: Consulta curso por ID
+    Banco-->>API: Dados do curso
+    API-->>Cliente: 200 OK + curso ou 404
+```
+
 ## Tecnologias  
 
 - Fastify 
