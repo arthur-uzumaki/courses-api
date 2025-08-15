@@ -8,6 +8,7 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 import { env } from '../env/env.ts'
+import { authenticateRoute } from './routes/authenticate.ts'
 import { createCourseRoute } from './routes/create-course.ts'
 import { getCourseByIdRoute } from './routes/get-course-by-id.ts'
 import { getCoursesRoute } from './routes/get-courses.ts'
@@ -46,5 +47,6 @@ if (env.NODE_ENV === 'development') {
 app.register(createCourseRoute)
 app.register(getCoursesRoute)
 app.register(getCourseByIdRoute)
+app.register(authenticateRoute)
 
 export { app }

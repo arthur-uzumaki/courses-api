@@ -1,13 +1,28 @@
 
 GET http://localhost:3333/courses
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWM0MDYyZS04MGQ4LTRiZWYtOGU4Yi04MWIzZGQyYWU0Y2QiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NTI5MTIyOH0.XfX4VuPWyJjSf6pM1P9_WTE2k3fgp4B6eJ777qS109Y
+
 
 ###
-GET  http://localhost:3333/courses/78ecd050-c0f6-4eca-83fb-cb079a0aa11a
+GET  http://localhost:3333/courses/dc32cbcf-7910-4387-b6b1-56301a418d4a
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWM0MDYyZS04MGQ4LTRiZWYtOGU4Yi04MWIzZGQyYWU0Y2QiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NTI5MTIyOH0.XfX4VuPWyJjSf6pM1P9_WTE2k3fgp4B6eJ777qS109Y
+
 ###
 
 POST http://localhost:3333/courses
 Content-Type:  application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWM0MDYyZS04MGQ4LTRiZWYtOGU4Yi04MWIzZGQyYWU0Y2QiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NTI5NjMyNX0.AbDfktRGGBRMTJNGkHgedNTnmprjHbX0QMFwLU-8Hb8
 
 {
   "title": "Curso de C++"
+}
+
+###
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "Vitoria_Oliveira@gmail.com",
+  "password": "123456"
 }
