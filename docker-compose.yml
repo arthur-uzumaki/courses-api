@@ -2,8 +2,10 @@ services:
   db:
     image: postgres:17
     environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: desafio
     ports:
       - "5432:5432"
+    volumes:
+      - ./docker/desafio_test.sql:/docker-entrypoint-initdb.d/desafio_test.sql

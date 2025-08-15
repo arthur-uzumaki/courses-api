@@ -8,6 +8,20 @@
       "when": 1755110967809,
       "tag": "0000_charming_iron_fist",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1755199411896,
+      "tag": "0001_abandoned_freak",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1755201100586,
+      "tag": "0002_white_sugar_man",
+      "breakpoints": true
     }
   ]
 }

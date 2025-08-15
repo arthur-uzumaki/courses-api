@@ -63,6 +63,37 @@
         "tags": [
           "courses"
         ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "search",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": "title",
+              "type": "string",
+              "enum": [
+                "title"
+              ]
+            },
+            "in": "query",
+            "name": "orderBy",
+            "required": false
+          },
+          {
+            "schema": {
+              "default": 1,
+              "type": "number"
+            },
+            "in": "query",
+            "name": "page",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Obter todos os cursos",
@@ -97,19 +128,27 @@
                                 ]
                               }
                             ]
+                          },
+                          "enrollments": {
+                            "type": "number"
                           }
                         },
                         "required": [
                           "id",
                           "title",
-                          "description"
+                          "description",
+                          "enrollments"
                         ],
                         "additionalProperties": false
                       }
+                    },
+                    "totalPage": {
+                      "type": "number"
                     }
                   },
                   "required": [
-                    "courses"
+                    "courses",
+                    "totalPage"
                   ],
                   "additionalProperties": false
                 }
