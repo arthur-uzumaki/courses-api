@@ -1,6 +1,5 @@
 
-GET http://localhost:3333/courses
-Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWM0MDYyZS04MGQ4LTRiZWYtOGU4Yi04MWIzZGQyYWU0Y2QiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NTI5MTIyOH0.XfX4VuPWyJjSf6pM1P9_WTE2k3fgp4B6eJ777qS109Y
+GET https://courses-api-fltpaq.fly.dev/courses
 
 
 ###
@@ -9,7 +8,7 @@ Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWM0MDYyZS04MGQ
 
 ###
 
-POST http://localhost:3333/courses
+POST https://courses-api-fltpaq.fly.dev/courses
 Content-Type:  application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWM0MDYyZS04MGQ4LTRiZWYtOGU4Yi04MWIzZGQyYWU0Y2QiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NTI5NjMyNX0.AbDfktRGGBRMTJNGkHgedNTnmprjHbX0QMFwLU-8Hb8
 
